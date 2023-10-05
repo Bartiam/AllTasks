@@ -30,11 +30,9 @@ int main()
 			auto result = std::make_unique<std::vector<int>>();
 			for (auto& el : randomNumbers)
 			{
-				if (set->count(el)) std::cout << el << " ";
+				if (!(set->count(el))) result->push_back(el);
 				set->insert(el);
-				result->push_back(el);
 			}
-			std::cout << std::endl;
 			return result;
 		};
 
